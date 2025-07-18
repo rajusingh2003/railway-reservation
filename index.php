@@ -1,0 +1,2 @@
+<?php session_start(); if (isset($_SESSION['user'])) { header('Location: dashboard.php'); exit; } ?>
+<html><body><h2>Welcome</h2><a href='login.php'>Login</a> | <a href='register.php'>Register</a></body></html>

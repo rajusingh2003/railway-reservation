@@ -1,0 +1,2 @@
+<?php session_start(); if (!isset($_SESSION['user'])) { header('Location: login.php'); exit; } ?>
+<h2>Dashboard</h2><a href='book_ticket.php'>Book Ticket</a> | <a href='pnr_status.php'>PNR Status</a> | <a href='logout.php'>Logout</a>

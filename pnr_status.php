@@ -1,0 +1,2 @@
+<?php require 'db/connect.php'; if ($_SERVER['REQUEST_METHOD'] === 'POST') { $pnr = $_POST['pnr']; $res = $conn->query("SELECT * FROM bookings WHERE pnr = '$pnr'"); $row = $res->fetch_assoc(); if ($row) { echo "PNR Found. Train ID: {$row['train_id']}, Seats: {$row['seats_booked']}"; } else { echo 'PNR not found.'; } } ?>
+<form method='POST'>Enter PNR: <input name='pnr'><br><button type='submit'>Check</button></form>
